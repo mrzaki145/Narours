@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+\:root
+  --l-green: $l-green
+  --d-green: $d-green
+
+html
+  font-size: 62.5%
+  color: #212529
+  background-color: #fff
+  -webkit-text-size-adjust: 100%
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  // overflow-x: hidden
+  overflow-y: scroll
+  height: auto
+  scroll-behavior: smooth
+
+
+  +big-desktop-up
+    font-size: 75%
+
+  +tablet-landscape
+    font-size: 56.25%
+
+  +tablet-portrait
+    font-size: 50%
+
+
+
+body
+  scroll-behavior: smooth
+  padding: 1.5rem
+
+  +tablet-landscape
+    padding: 0
+
+
+::selection
+  color: $white
+  background-color: $green
+
+
+.container
+  width: 100%
+  margin-right: auto
+  margin-left: auto
+  padding-left: 2rem
+  padding-right: 2rem
+
+  @media (min-width:576px)
+    max-width: 540px
+    padding-left: 0
+    padding-right: 0
+
+  @media (min-width:768px)
+    max-width: 720px
+
+  @media (min-width:992px)
+    max-width: 960px
+
+  @media (min-width:1200px)
+    max-width: 1140px

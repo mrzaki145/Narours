@@ -1,0 +1,110 @@
+.section
+
+  &--features
+    padding: 20rem 0
+    background-image: linear-gradient(to right bottom, hsla(111, 54%, 63%, 0.8), hsla(159, 63%, 43%, 0.8)), url('./../imgs/nat-4.jpg')
+    background-position: top
+    background-repeat: no-repeat
+    background-size: cover
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%)
+
+    +phone-only
+      clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%)
+
+
+    .row
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      grid-gap: $grid-gutter
+
+      +desktop
+        grid-template-columns: repeat(2, 1fr)
+
+      +phone-only
+        grid-template-columns: repeat(1, 1fr)
+
+
+    .feature
+      padding: 3rem 2rem
+      text-align: center
+      border-radius: 4px
+      background-color: rgba($white, 0.8)
+      box-shadow: 0 1px 17px 1px rgba(0,0,0,.16)
+      backface-visibility: hidden
+      transition: all 0.15s ease-out
+
+      // enable the hover effect on desktop only
+      @media only screen and (hover: hover), only screen and (min-width: 56.25em)
+        &:hover
+          background-color: rgba($white, 0.95)
+          box-shadow: 0 1px 17px 1px rgba(0,0,0,.26)
+          transform: scale(1.04) translateY(-1.5rem)
+
+      +phone-only
+        width: 75%
+        padding: 6rem 4rem
+        margin: 0 auto
+
+      &__icon
+        font-size: 6rem
+        color: transparent
+        background-image: linear-gradient( -135deg, #139c15 10%, #3CD500 100%)
+        background-clip: text
+
+
+  &--tours
+    padding: 25rem 0
+    padding-bottom: 10rem
+    margin-top: -15rem
+    background-color: #f7f7f7
+
+
+  &--stories
+    padding: 10rem 0
+    position: relative
+    overflow: hidden
+
+
+    .bg-video
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      opacity: 0.2
+
+      video
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+
+  &--booking
+    padding: 10rem 0
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%)
+
+    +tablet-landscape
+      padding: 8rem 2rem
+
+    .booking
+      background-image: linear-gradient(105deg, rgba($light, 0.85) 60%, transparent 0), url('./../imgs/nat-10.jpg')
+      background-size: cover
+      background-position: top center
+      background-repeat: no-repeat
+      box-shadow: 0 1px 17px 1px rgba(0,0,0,.26)
+      border-radius: 4px
+      padding: 6rem
+      padding-left: 10rem
+
+      +tablet-landscape
+        padding: 4rem 6rem
+        background-image: linear-gradient(105deg, rgba($light, 0.85) 100%, transparent 0), url('./../imgs/nat-10.jpg')
+
+
+
+      &__form
+        width: 50%
+
+        +tablet-landscape
+          width: 100%

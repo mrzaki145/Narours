@@ -1,0 +1,110 @@
+.form
+
+  &__group
+    width: 80%
+
+    +tablet-portrait
+      width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 2rem
+
+    &--radio
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+
+  &__input
+    display: block
+    width: 100%
+    padding: 1rem 2rem
+    font-size: inherit
+    font-family: inherit
+    position: relative
+    z-index: 200
+    cursor: pointer
+    color: inherit
+    background-color: $white
+    border: 2px solid $white
+    border-radius: 4px
+    transition: all 0.15s
+
+    &:focus
+      border-color: $green
+      box-shadow: 0.2rem 0.8rem 1.6rem rgba($dark, 0.1)
+      outline: none
+
+      &:invalid
+        border-color: $red
+
+
+    &::placeholder
+      color: #999
+
+
+  &__label
+    display: inline-block
+    padding: 0 2rem
+    margin-top: -3rem
+    font-size: 1.4rem
+    font-weight: 400
+    position: relative
+    z-index: 199
+    transform: translateY(0)
+    opacity: 1
+    backface-visibility: hidden
+    transition: all .5s
+
+
+  &__input:placeholder-shown + &__label
+    transform: translateY(-3rem)
+    opacity: 0
+    z-index: -1
+
+
+  &__radio
+    position: relative
+    padding-left: 3rem
+
+    &:not(:last-child)
+      margin-right: 3rem
+
+    &--input
+      display: none
+
+      &:checked + .form__radio--label .form__radio--btn
+        background-color: $green
+
+    &--label
+      cursor: pointer
+      text-transform: capitalize
+      font-size: inherit
+
+
+    &--btn
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      padding: .3rem
+      background-color: transparent
+      background-clip: content-box
+      border: 3px solid $green
+      border-radius: 50%
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: background-color .5s
+
+      // &::after
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 50%
+        laft: 50%
+        width: 1.5rem
+        height: 1.5rem
+        border-radius: 50%
+        transform: translate(-50%, -50%)
+        background-color: $green

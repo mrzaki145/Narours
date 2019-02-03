@@ -1,0 +1,139 @@
+.cards-container
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: $grid-gutter *2
+
+  +tablet-landscape
+    grid-template-columns: repeat(1, 1fr)
+
+
+.card
+  perspective: 150rem
+  position: relative
+  height: 50rem
+
+  +tablet-landscape
+    width: 60%
+    margin: 0 auto
+
+  +tablet-portrait
+    width: 80%
+
+  +phone-only
+    width: 75%
+
+
+  &__side
+    background-color: $white
+    height: 50rem
+    transition: all 1.4s cubic-bezier(0.8, 0, 0.26, 1.65)
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    overflow: hidden
+    border-radius: 4px
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1)
+    backface-visibility: hidden
+
+    &--front
+      border-top-color: $white
+      position: relative
+      z-index: 10
+
+
+    &--back
+      transform: rotateY(180deg)
+
+      &-1
+        background-image: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%)
+      &-2
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%)
+      &-3
+        background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%)
+
+
+  &:hover &__side--front
+    transform: rotateY(-180deg)
+
+  &:hover &__side--back
+    transform: rotateY(0)
+
+
+
+  &__title
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      top: 1rem
+      left: 1rem
+      right: 1rem
+      bottom: 1rem
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+      border: 1rem solid $white
+      border-radius: 4px
+
+    &--img
+      height: 22rem
+      // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+      background-size: cover
+      background-position: top
+      background-repeat: no-repeat
+      background-blend-mode: hard-light
+
+      &-1
+        background-image: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%), url('./../imgs/nat-5.jpg')
+      &-2
+        background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%), url('./../imgs/nat-6.jpg')
+      &-3
+        background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%), url('./../imgs/nat-7.jpg')
+
+
+    &--heading
+      position: absolute
+      bottom: 3rem
+      left: 3rem
+      right: 2rem
+      z-index: 15
+      text-transform: uppercase
+      display: inline-block
+      color: $white
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45)
+
+
+  &__details
+    width: 75%
+    text-align: center
+
+    ul
+      list-style-type: none
+
+    li
+      text-transform: capitalize
+
+      &:not(:last-child)
+        padding-bottom: 1rem
+        border-bottom: 1px solid #eee
+        margin-bottom: 1rem
+
+
+  &__price
+    color: $white
+    text-align: center
+
+    h5
+      font-weight: 400
+
+    h1
+      font-size: 8rem
+      font-weight: 200
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35)
+
+      span
+        font-size: 2rem
+        padding-left: .5rem

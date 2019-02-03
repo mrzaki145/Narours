@@ -1,0 +1,335 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title Natours | Traviling landing page
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="./imgs/favicon.png")
+    //- external stylesheets
+    link(rel="stylesheet", href="./styles/main-min.css")
+    link(rel="stylesheet", href="./styles/linea-iconfont.css")
+
+  body
+
+    //- navbar
+    nav.nav
+      input#nav-toggle.nav__checkbox(type="checkbox")
+
+      label.nav__btn(for="nav-toggle")
+        .checkmark
+          span
+          span
+          span
+
+      .nav__bg &nbsp;
+
+      ul.nav__menu.center-in-middle
+        li.nav__menu--item: a.btn.nav__link(href='#') Home
+        li.nav__menu--item: a.btn.nav__link(href='#') Popular tours
+        li.nav__menu--item: a.btn.nav__link(href='#') Book now
+        li.nav__menu--item: a.btn.nav__link(href='#') Stories
+        li.nav__menu--item: a.btn.nav__link(href='#') About Us
+
+
+
+    //- header
+    header.header.center-in-middle
+      .header__logo
+        img.header__logo--img(src="./imgs/logo-white.png", alt="logo")
+
+      h1.header__title.mb-4
+        span.header__title--main outdoors
+        span.header__title--sub is where life happens
+
+      .center-text
+        a.btn.header__btn.btn__primary(href='#section--tours') discover out tours 
+
+
+
+    //- main
+    main.main
+      .center-text.mb-6.px-4
+        h2.main__title exciting tours for advernturous people
+
+      .container
+        .row
+          div
+            h4.mb-1 Tempor sit Lorem irure do tempor laborum quis qui.
+            p.mb-3 Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+            h4.mb-1 Tempor sit Lorem irure do tempor laborum quis qui.
+            p.mb-4 Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+            a.btn.btn__secondary(href='#') Learn more
+              span &rarr;
+
+          .composition
+            img.img-fluid.composition__photo.composition__photo--1(src="./imgs/nat-1.jpg")
+            img.img-fluid.composition__photo.composition__photo--2(src="./imgs/nat-2.jpg")
+            img.img-fluid.composition__photo.composition__photo--3(src="./imgs/nat-3.jpg")
+
+
+
+    //- sections
+    section.section.section--features
+      .container
+        .row
+          .feature
+            .feature__icon.mb-2
+              i.icon-basic-world
+            h4.mb-2 explor the world
+            p Est ullamco et nulla ipsum. Nostrud pariatur do #[a.btn.btn__link(href="#") sit eu mollit] qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+
+
+          .feature
+            .feature__icon.mb-2
+              i.icon-basic-heart
+            h4.mb-2 meet nature
+            p Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+
+
+          .feature
+            .feature__icon.mb-2
+              i.icon-basic-link
+            h4.mb-2 find your way
+            p Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+
+
+          .feature
+            .feature__icon.mb-2
+              i.icon-basic-share
+            h4.mb-2 live a healther life
+            p Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+
+
+    section.section.section--tours.mb-3
+      .center-text.mb-6
+        h2#section--tours.main__title most popular tours
+
+      .container.mb-6
+        .cards-container
+          .card.card--flipped
+            //- front side
+            .card__side.card__side--front.card__side--flipped
+              .card__title.mb-4
+                .card__title--img.card__title--img-1
+                h3.card__title--heading.card__title--heading-1 the sea explor
+              .card__details.m-auto
+                ul
+                  li 3 days tour
+                  li up to 30 people
+                  li 2 tours guides
+                  li Diffculty: easy
+
+            //- back side
+            .card__side.card__side--back.card__side--back-1.center-in-middle
+              .card__price.mb-4
+                h5 only
+                h1 264
+                  span $
+              .center-text
+                a.btn.btn__primary(href='#popup') book now
+
+
+
+          .card
+            //- front side
+            .card__side.card__side--front
+              .card__title.mb-4
+                .card__title--img.card__title--img-2
+                h3.card__title--heading.card__title--heading-2 the forest hiker
+              .card__details.m-auto
+                ul
+                  li 7 days tour
+                  li up to 40 people
+                  li 6 tours guides
+                  li Diffculty: medium
+
+            //- back side
+            .card__side.card__side--back.card__side--back-2.center-in-middle
+              .card__price.mb-4
+                h5 only
+                h1 520
+                  span $
+              .center-text
+                a.btn.btn__primary(href='#popup') book now
+
+
+          .card
+            //- front side
+            .card__side.card__side--front
+              .card__title.mb-4
+                .card__title--img.card__title--img-3
+                h3.card__title--heading.card__title--heading-3 the snow adventurer
+              .card__details.m-auto
+                ul
+                  li 14 days tour
+                  li up to 50 people
+                  li 8 tours guides
+                  li Diffculty: hard
+
+            //- back side
+            .card__side.card__side--back.card__side--back-3.center-in-middle
+              .card__price.mb-4
+                h5 only
+                h1 860
+                  span $
+              .center-text
+                a.btn.btn__primary(href='#popup') book now
+
+      .center-text
+        a.btn.btn__primary.btn--green(href='#') discover all tours
+          span &rarr;
+
+
+    section.section.section--stories.mb-3
+      .center-text.mb-6
+        h2.main__title we make people happy
+
+
+      .bg-video
+        video(autoplay, muted, loop)
+          source(src="./imgs/video.mp4", type="video/mp4")
+          source(src="./imgs/video.webm", type="video/webm")
+          |your browser does not support video
+
+
+      .container.mb-6
+        .story.m-auto.mb-4
+          figure.story__img
+            img(src="./imgs/nat-8.jpg", alt="")
+            figcaption.center-in-middle 
+              |mary
+              br
+              |smith
+
+          .story__details
+            h4.mb-1 i had the best week ever.
+            p.mb-3 Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit #[a.btn.btn__link(href="#") qui incididunt] labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+            a.btn.btn__secondary.btn__secondary--md(href='#') Learn more
+              span &rarr;
+
+
+        .story.m-auto
+          figure.story__img
+            img(src="./imgs/nat-9.jpg", alt="")
+            figcaption.center-in-middle
+              |jack
+              br
+              |wilson
+
+          .story__details
+            h4.mb-1 my life is completely different now.
+            p.mb-3 Est ullamco et nulla ipsum. Nostrud pariatur do sit eu mollit qui incididunt labore consectetur nulla cillum esse sunt. ea id pariatur enim voluptate do tempor tempor tempor ipsum laboris.
+            a.btn.btn__secondary.btn__secondary--md(href='#') Learn more
+              span &rarr;
+
+
+      .center-text
+        a.btn.btn__primary.btn--green(href='#') read all stories
+          span &rarr;
+
+
+    section.section.section--booking.mb-3
+      .booking.container
+        h3.main__title.mb-4 start booking now
+
+        form.form.booking__form(action='#', method='post')
+          .form__group
+            input#first-name.form__input(type="text", placeholder='First Name', required)
+            label.form__label(for="first-name") First Name:
+
+          .form__group
+            input#last-name.form__input(type="text", placeholder='Last Name', required)
+            label.form__label(for="last-name") Last Name:
+
+          .form__group
+            input#email.form__input(type="email", placeholder='Email', required)
+            label.form__label(for="email") Email:
+
+          .form__group.form__group--radio.mb-4
+            .form__radio
+              input#option-1.form__radio--input(type="radio", name='size')
+              label.form__radio--label(for="option-1")
+                span.form__radio--btn
+                |small tour group
+
+            .form__radio
+              input#option-2.form__radio--input(type="radio", name='size')
+              label.form__radio--label(for="option-2")
+                span.form__radio--btn
+                |large tour group
+
+
+          .form__group
+            button.btn.btn__primary.btn__primary--md.btn--green(type="submit", name="button") next step
+              span &rarr;
+
+
+
+    //- footer
+    footer.footer
+      .container
+        .footer__logo.m-auto.mb-6
+          picture
+            source(srcset="./imgs/logo-green-small-1x.png", media='(max-width: 37.5em)')
+            source(srcset="./imgs/logo-green-2x.png", media='(min-width: 37.5em)')
+            img.img-fluid(srcset='./imgs/logo-green-1x.png 1x, ./imgs/logo-green-2x.png 2x', alt='logo')
+
+
+        .row
+          .row--inner
+            div
+              h4 site navigation
+              ul.footer__nav
+                li.footer__nav--item
+                  a.btn(href='#') page 1
+                li.footer__nav--item
+                  a.btn(href='#') page 2
+                li.footer__nav--item
+                  a.btn(href='#') page 3
+                li.footer__nav--item
+                  a.btn(href='#') page 4
+                li.footer__nav--item
+                  a.btn(href='#') page 5
+                li.footer__nav--item
+                  a.btn(href='#') page 6
+            div
+              h4 other links
+              ul.footer__nav
+                li.footer__nav--item
+                  a.btn(href='#') Company
+                li.footer__nav--item
+                  a.btn(href='#') news
+                li.footer__nav--item
+                  a.btn(href='#') blogs
+                li.footer__nav--item
+                  a.btn(href='#') contact us
+                li.footer__nav--item
+                  a.btn(href='#') hire us
+                li.footer__nav--item
+                  a.btn(href='#') our story
+
+          .footer__copyright
+            p.mb-3 Cupidatat consequat in labore ut anim. #[a.btn.btn__link(href="#") Esse nostrud] pariatur deserunt mollit ut consequat consequat eu. Laborum consequat laboris nulla laboris laborum mollit mollit aute aliqua labore.
+            p Cupidatat consequat in labore ut anim. Esse nostrud ut pariatur deserunt mollit ut consequat consequat eu. Laborum consequat #[a.btn.btn__link(href="#") laboris null] laboris laborum mollit mollit aute aliqua labore.
+
+
+
+
+
+    //- popup
+    #popup.popup.center-in-middle
+      .popup__container
+        a.popup__clos-btn(href='#section--tours') &times;
+
+        .popup--left
+          img.popup__img(src="./imgs/popup-img.webp", alt="")
+
+        .popup--right
+          h2.main__title start booking now
+          h6.msg.mb-3 important &ndash; please read these terms before booking.
+
+          p.popup__text.mb-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere molestias praesentium, dolorem beatae reiciendis. Ratione quam, at facilis voluptatem nemo, adipisci libero laboriosam omnis rem ut, placeat fuga. Explicabo, harum.
+
+          a.btn.btn__primary.btn__primary--md.btn--green(href='#') i agree
+            span &rarr;
